@@ -24,16 +24,19 @@ function addUser() {
     img.src = data.picture.large;
     img.className = 'card-img-top';
     const card = document.createElement('div');
-    card.classList.add('card', 'col-2', 'mx-1');
+    card.classList.add('card', 'p-2', 'shadow');
     const title = document.createElement('h5');
     title.innerHTML = data.name.first + " " + data.name.last;
     title.className = 'card-title';
     const cardBody = document.createElement('div');
     cardBody.className = 'card-body';
-    
+    const space = document.createElement('div');
+    space.className = 'col-2';
+
     card.appendChild(img);
     cardBody.appendChild(title);
     card.appendChild(cardBody);
-    document.getElementById('cards-gallery').appendChild(card);
+    space.appendChild(card);
+    document.getElementById('cards-gallery').appendChild(space);
 
   }
